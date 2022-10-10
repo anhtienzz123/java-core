@@ -43,6 +43,8 @@ public class ClassTestMain {
 
         printClassInfo(Collection.class, boolean.class, int[][].class, Color.class,
                 circleObject.getClass());
+        
+        Package package1;
     }
 
     private static void printClassInfo(Class<?>... classes) {
