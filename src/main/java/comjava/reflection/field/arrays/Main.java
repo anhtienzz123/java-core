@@ -60,7 +60,6 @@ public class Main {
 
     public static void inspectArrayObject(Object arrayObject) {
         Class<?> clazz = arrayObject.getClass();
-
         System.out.println(String.format("Is array : %s", clazz.isArray()));
 
         Class<?> arrayComponentType = clazz.getComponentType();
