@@ -1,18 +1,19 @@
 package comjava;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-
 public class Main {
 
+
     public static void main(String[] args) {
-        List<Map<String, String>> mapList = new ArrayList<>();
-        Map<String, String> map = new HashMap<>();
-        map.put("key1", "alo");
-        mapList.add(map);
-        
-        System.out.println(mapList);
+        final int x;
+
+        Integer x1 = 0;
+        Integer x2 = new Integer(0);
+        System.out.println(x2 == 0);
+    }
+
+    public static int getVal() {
+
+        return 1;
+
     }
 }
