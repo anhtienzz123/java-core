@@ -5,7 +5,7 @@ import java.util.Arrays;
 public class Main {
 
     public static void main(String[] args) {
-        Report report1 = new Report("report 1", "admin");
+        Report report1 = new Report("report 1", "not user");
         ExpressionBuilder builder = new ExpressionBuilder();
 
         PermissionExpression exp = builder.build(report1);
