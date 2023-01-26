@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="WARN">
+	<Properties>
+		<Property name="filename">D:/test/log</Property>
+		<Property name="logPattern">%date{yyyy-MM-dd'T'HH:mm:ss.SSS} [%thread] %-5level [%logger:%method:%line] - %msg%n%ex{full}
+		</Property>
+	</Properties>
+
+	<Appenders>
+		<RollingFile name="rollingFile"
+			fileName="${filename}/logdemo.log"
+			filePattern="${filename}/logdemo-%d{HH-mm-ss-SSS}.log">
+			<!-- <PatternLayout> <Pattern>%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} 
+				- %msg%n </Pattern> </PatternLayout> -->
+			<PatternLayout pattern="${logPattern}" />
+
+			<Policies>
+				<SizeBasedTriggeringPolicy size="1 KB" />
+			</Policies>
+		</RollingFile>
+
+		<Console name="Console" target="SYSTEM_OUT">
+			<PatternLayout pattern="${logPattern}" />
+		</Console>
+	</Appenders>
+	<Loggers>
+		<Logger name="comjava.logging" level="debug"  >
+			<AppenderRef ref="rollingFile" />
+			<AppenderRef ref="Console" />
+		</Logger>
+
+		<Root level="info">
+			<AppenderRef ref="Console" />
+		</Root>
+	</Loggers>
+</Configuration>
