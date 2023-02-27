@@ -16,6 +16,6 @@ public class Lec02FluxCreateRefactor {
             new Thread(task).start();
         }
 
-        Utils.sleep(10);
+        Utils.sleepSeconds(10);
     }
 }

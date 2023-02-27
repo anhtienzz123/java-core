@@ -5,9 +5,17 @@ import reactive.section03.NameProducer;
 
 public class Utils {
 
-    public static void sleep(int seconds) {
+    public static void sleepSeconds(int seconds) {
         try {
             Thread.sleep(seconds * 1000);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    public static void sleepMillis(int millis) {
+        try {
+            Thread.sleep(millis);
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -26,7 +34,11 @@ public class Utils {
     }
 
     public static DefaultSubscriber<Object> defaultSubscriber() {
-        return new DefaultSubscriber<Object>("subscriber1");
+        return new DefaultSubscriber<Object>("subscriber");
+    }
+
+    public static DefaultSubscriber<Object> defaultSubscriber(String name) {
+        return new DefaultSubscriber<Object>(name);
     }
 
     public static NameProducer nameProducer() {
