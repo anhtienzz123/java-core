@@ -28,8 +28,5 @@ public class Main {
         
         OutputStreamWriter outputStreamWriter = new OutputStreamWriter(bufferedOutputStream);
         outputStreamWriter.write("hello word");
-        
-        
-        
     }
 }
