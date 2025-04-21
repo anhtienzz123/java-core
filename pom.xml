@@ -4,8 +4,8 @@
 	<artifactId>java-core</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<properties>
-		<maven.compiler.source>17</maven.compiler.source>
-		<maven.compiler.target>17</maven.compiler.target>
+		<maven.compiler.source>21</maven.compiler.source>
+		<maven.compiler.target>21</maven.compiler.target>
 	</properties>
 	<dependencies>
 		<!-- https://mvnrepository.com/artifact/org.apache.commons/commons-lang3 -->
@@ -24,7 +24,7 @@
 		<dependency>
 			<groupId>org.projectlombok</groupId>
 			<artifactId>lombok</artifactId>
-			<version>1.18.22</version>
+			<version>1.18.38</version>
 			<scope>provided</scope>
 		</dependency>
 		<!-- log4j2 -->
@@ -55,7 +55,7 @@
 			<artifactId>javafaker</artifactId>
 			<version>1.0.2</version>
 		</dependency>
-		
+
 		<!-- Azure -->
 		<!-- https://mvnrepository.com/artifact/com.azure/azure-storage-blob -->
 		<dependency>
