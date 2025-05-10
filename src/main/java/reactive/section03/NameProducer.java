@@ -1,7 +1,8 @@
 package reactive.section03;
 
 import java.util.function.Consumer;
-import com.github.javafaker.Faker;
+
+import net.datafaker.Faker;
 import reactor.core.publisher.FluxSink;
 
 public class NameProducer implements Consumer<FluxSink<String>> {
@@ -14,7 +15,7 @@ public class NameProducer implements Consumer<FluxSink<String>> {
     }
 
     public void producer() {
-        String country = Faker.instance().country().name();
+        String country = new Faker().country().name();
         this.fluxSink.next(country);
     }
 }

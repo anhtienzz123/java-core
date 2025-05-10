@@ -1,7 +1,7 @@
 package reactive.section04;
 
-import com.github.javafaker.Faker;
 import lombok.Data;
+import net.datafaker.Faker;
 
 @Data
 public class User {
@@ -11,6 +11,6 @@ public class User {
 
     public User(int id) {
         this.id = id;
-        this.name = Faker.instance().name().fullName();
+        this.name = new Faker().name().fullName();
     }
 }

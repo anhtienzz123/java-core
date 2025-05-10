@@ -1,6 +1,6 @@
 package reactive.section04;
 
-import com.github.javafaker.Faker;
+import net.datafaker.Faker;
 import reactive.Utils;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
@@ -18,6 +18,6 @@ public class Lec06OnError {
     }
 
     private static Mono<Integer> fallback() {
-        return Mono.fromSupplier(() -> Faker.instance().random().nextInt(100, 200));
+        return Mono.fromSupplier(() -> new Faker().random().nextInt(100, 200));
     }
 }

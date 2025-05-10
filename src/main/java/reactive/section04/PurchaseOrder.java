@@ -1,7 +1,7 @@
 package reactive.section04;
 
-import com.github.javafaker.Faker;
 import lombok.Data;
+import net.datafaker.Faker;
 
 @Data
 public class PurchaseOrder {
@@ -12,7 +12,7 @@ public class PurchaseOrder {
 
     public PurchaseOrder(int userId) {
         this.userId = userId;
-        this.item = Faker.instance().commerce().productName();
-        this.price = Faker.instance().commerce().price();
+        this.item = new Faker().commerce().productName();
+        this.price = new Faker().commerce().price();
     }
 }
