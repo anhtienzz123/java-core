@@ -1,4 +1,4 @@
-package designpattern.creational.builder.car.test;
+package designpattern.test.builder.car;
 
 // Director
 public class CarDirector {
