@@ -4,10 +4,10 @@ package designpattern.creational.factorymethod.logistics;
 public abstract class Logistics {
 
 	// Factory method
-	public abstract Transport createTransport();
+	abstract Transport createTransport();
 
-	// Common logic that uses the product
-	public void planDeliver() {
+	// Business logic using the Product
+	public void planDelivery() {
 		Transport transport = this.createTransport();
 		transport.deliver();
 	}

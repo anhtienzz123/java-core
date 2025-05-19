@@ -1,14 +1,14 @@
 package designpattern.creational.factorymethod.logistics;
 
 public class Main {
-	
+
 	public static void main(String[] args) {
-		Logistics logistics;
+		// Client chooses RoadLogistics
+		Logistics roadLogistics = new RoadLogistics();
+		roadLogistics.planDelivery(); // output: Delivering by land in a box
 
-		logistics = new RoadLogistics();
-		logistics.planDeliver(); // output: Delivering by land in a box
-
-		logistics = new SeaLogistics();
-		logistics.planDeliver(); // output: Delivering by sea in a container
+		// Client chooses SeaLogistics
+		Logistics seaLogistics = new SeaLogistics();
+		seaLogistics.planDelivery(); // output: Delivering by sea in a container
 	}
 }
