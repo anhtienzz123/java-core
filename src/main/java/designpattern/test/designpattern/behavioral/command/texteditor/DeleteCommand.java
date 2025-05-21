@@ -15,7 +15,7 @@ public class DeleteCommand implements Command {
 		if (lenght != 0) {
 			this.deletedCharacter = textEditor.getText().charAt(lenght - 1);
 			textEditor.delete();
-		}else {
+		} else {
 			System.out.println("Nothing to delete");
 		}
 	}
