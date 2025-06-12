@@ -7,7 +7,7 @@ import java.time.LocalDate;
  * Demonstration class showing the Visitor pattern implementation for
  * calculating total price of products in a shopping cart.
  */
-public class ShoppingCartDemo {
+public class Main {
     public static void main(String[] args) {
         System.out.println("Shopping Cart - Visitor Pattern Demo");
         System.out.println("====================================");
